@@ -1,0 +1,12 @@
+.gallery {
+    columns: 12 180px;
+    column-gap: .5em;
+}
+.img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: .5em;
+    outline: 1px solid #ccc;
+    border-radius: .5rem;
+    /* object-fit: cover; */
+}
