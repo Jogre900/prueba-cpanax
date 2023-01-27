@@ -7,11 +7,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div
-      style={{
-        backgroundColor: "antiquewhite",
-      }}
-    >
+    <div>
       <Header />
 
       <div className="container">{children}</div>

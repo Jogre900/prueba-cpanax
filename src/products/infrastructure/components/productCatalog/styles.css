@@ -1,3 +1,16 @@
 .pag-btn:hover {
     cursor: pointer;
 }
+.change-size-btn {
+    background-color: #ffffff;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 1px solid #ccc;
+
+}
+.icon,
+.change-size-btn:hover {
+    cursor: pointer;
+    color: #B6EADA
+    /* background-color: #B6EADA; */
+}

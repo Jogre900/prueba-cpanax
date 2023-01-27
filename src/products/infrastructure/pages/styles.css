@@ -28,11 +28,7 @@
     grid-column: span 2 / span 2;
 }
 
-.product-card {
-    position: relative;
-    width: 180px;
-    height: 180px;
-}
+
 
 .card-img {
     display: block;

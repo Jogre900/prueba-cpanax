@@ -1,7 +1,10 @@
 .header {
     display: flex;
     gap: 1rem;
-    background-color: #09f;
+    /* background-color: #09f; */
     height: 48px;
     padding: 1rem;
+}
+.link:hover {
+    color: #5B8FB9
 }

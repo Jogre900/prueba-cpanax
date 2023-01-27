@@ -1,34 +1,13 @@
 import { useState } from "react";
-import { FaRegWindowMaximize } from "react-icons/fa";
+import { FaWindowRestore } from "react-icons/fa";
 import type { Product } from "../../../domain/product.model";
+import Pagination from "../pagination/pagination";
 import ProductCard from "../productCard/productCard";
+import { colors } from "../../../../config/layout/theme";
 import "./styles.css";
 
 type ProductCatalogProps = {
   data: any[] | null;
-};
-type PaginationProps = {
-  totalElement: number;
-  elementPerPage: number;
-  changePage: (n: number) => void;
-};
-
-const Pagination = ({ totalElement, elementPerPage, changePage }: PaginationProps): JSX.Element => {
-  const pageNumber = [];
-  for (let index = 1; index <= Math.ceil(totalElement / elementPerPage); index++) {
-    pageNumber.push(+index);
-  }
-  return (
-    <div>
-      <ul>
-        {pageNumber.map((n: number) => (
-          <li key={n}>
-            <button onClick={() => changePage(n)}>{n}</button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 };
 
 const ProductCatalog = ({ data }: ProductCatalogProps): JSX.Element => {
@@ -48,18 +27,37 @@ const ProductCatalog = ({ data }: ProductCatalogProps): JSX.Element => {
   return (
     <div className="grid gap-1">
       <div className="col-12">
-        <div>
-          <FaRegWindowMaximize
+        <div className="flex">
+          <button
+            className="flex align-items-center  justify-content-start color-light fw-500 change-size-btn"
             onClick={() => {
               setSize(size === "3" ? "2" : "3");
             }}
-            color="#09f"
-          />
+          >
+            <span>Change size</span>
+            {/* <FaWindowRestore size={20} className="ml-1 icon" /> */}
+          </button>
         </div>
       </div>
-      {test && test.map((p: Product) => <ProductCard key={p.id} item={p} className={`col-${size}`} />)}
+
+      <div
+        className="grid gap-1 col-12"
+        style={{
+          height: "750px",
+        }}
+      >
+        {test &&
+          test.map((p: Product) => (
+            <ProductCard key={p.id} item={p} className={`col-${size} flex justify-content-center`} />
+          ))}
+      </div>
       <div className="col-12 flex justify-content-center">
-        <Pagination elementPerPage={elemPerPage} totalElement={data ? data?.length : 0} changePage={changePage} />
+        <Pagination
+          className="mt-3"
+          elementPerPage={elemPerPage}
+          totalElement={data ? data?.length : 0}
+          changePage={changePage}
+        />
       </div>
     </div>
   );

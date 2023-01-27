@@ -1,5 +1,6 @@
 import useProducts from "../hooks/useProducts";
 import ProductCatalog from "../components/productCatalog/productCatalog";
+import Heading from "../../../config/layout/heading/heading";
 import "./styles.css";
 
 const Products = (): JSX.Element => {
@@ -15,8 +16,7 @@ const Products = (): JSX.Element => {
 
   return (
     <>
-      <h1>List of Products</h1>
-
+      <Heading className="mb-3" title="List of Products" />
       <ProductCatalog data={data} />
     </>
   );

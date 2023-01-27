@@ -60,7 +60,7 @@ const UserTable = ({ data }: UserTableProps) => {
   return (
     <div>
       <table {...getTableProps()}>
-        <thead>
+        <thead className="bg-primary color-superlight">
           {headerGroups.map((headerG) => {
             return (
               <tr {...headerG.getHeaderGroupProps()}>

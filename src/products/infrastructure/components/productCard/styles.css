@@ -4,7 +4,7 @@
     height: 250px;
     border-radius: 0.5rem;
     overflow: hidden;
-    transition: all ease-in 10ms;
+    transition: all ease-in 150ms;
 }
 .product-card:hover {
     cursor: pointer;

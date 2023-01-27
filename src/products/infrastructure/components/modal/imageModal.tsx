@@ -23,7 +23,7 @@ const customStyles = {
 
 const ImageModal = ({ images, isOpen, onRequestClose }: ImageModalProps): JSX.Element => {
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
+    <Modal ariaHideApp={false} isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
       <div className="gallery">
         {images.map((i) => {
           return <img key={i} src={i} alt={i} className="img" />;

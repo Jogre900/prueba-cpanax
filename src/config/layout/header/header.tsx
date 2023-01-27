@@ -4,12 +4,12 @@ import "./styles.css";
 const Header = () => {
   return (
     <>
-      <nav className="header justify-content-end align-items-center">
+      <nav className="header justify-content-end align-items-center bg-primary">
         {routeConfig.map((elem) => (
           <Link
             key={elem.id}
             to={elem.path}
-            className="text-white decoration-none upper-case white-space-nowrap fw-500"
+            className="decoration-none upper-case white-space-nowrap bold font-size-20 color-superlight link"
           >
             {elem.id}
           </Link>

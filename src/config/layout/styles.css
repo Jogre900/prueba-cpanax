@@ -5,6 +5,32 @@
     height: 100vh;
 }
 
+.bg-primary {
+    background-color: #03001C;
+}
+.bg-secondary {
+    background-color: #301E67;
+}
+.bg-light {
+    background-color: #5B8FB9;
+}
+.bg-superlight {
+    background-color: #B6EADA;
+}
+
+.color-primary {
+    color: #03001C;
+}
+.color-secondary {
+    color: #301E67;
+}
+.color-light {
+    color: #5B8FB9;
+}
+.color-superlight {
+    color: #B6EADA;
+}
+
 .mv-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -152,4 +178,23 @@
 
 .font-size-20 {
     font-size: 20px;
+}
+
+.col-12 {
+    grid-column: span 12 / span 12;
+}
+
+.col-6 {
+    grid-column: span 6 / span 6;
+}
+.col-4 {
+    grid-column: span 4 / span 4;
+}
+
+.col-3 {
+    grid-column: span 3 / span 3;
+}
+
+.col-2 {
+    grid-column: span 2 / span 2;
 }
