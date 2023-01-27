@@ -3,7 +3,7 @@ import fetchUsers from "../api/api";
 import type { User } from "../../domain/user.model";
 
 const useUsers = () => {
-  const [data, setData] = useState<User[] | null>(null);
+  const [data, setData] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
