@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { CellProps, Column, useTable } from "react-table";
+import { useTable } from "react-table";
 import "./styles.css";
 import UserModal from "../userModal/userModal";
 import type { User } from "../../../domain/user.model";

@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { FaWindowRestore } from "react-icons/fa";
 import type { Product } from "../../../domain/product.model";
 import Pagination from "../pagination/pagination";
 import ProductCard from "../productCard/productCard";
-import { colors } from "../../../../config/layout/theme";
 import "./styles.css";
 
 type ProductCatalogProps = {
@@ -35,7 +33,6 @@ const ProductCatalog = ({ data }: ProductCatalogProps): JSX.Element => {
             }}
           >
             <span>Change size</span>
-            {/* <FaWindowRestore size={20} className="ml-1 icon" /> */}
           </button>
         </div>
       </div>
